@@ -52,6 +52,14 @@ theme.tasklist_bg_minimize = "#2b303b"
 theme.prompt_fg = "#eff1f5"
 theme.prompt_bg = "#2b303b"
 
+-- Battery
+theme.battery_text_fg = "#eff1f5"
+theme.battery_icon_color = "#eff1f5" 
+theme.battery_warning_bg = "bf616a"
+theme.battery_warning_fg = "eff1f5"
+theme.battery_margin_left = 10
+theme.battery_margin_right = 10
+
 -- Menu
 theme.menu_submenu_icon = themes_path.."default/submenu.png"
 theme.menu_height = dpi(15)

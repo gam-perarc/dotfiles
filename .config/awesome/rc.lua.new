@@ -262,12 +262,7 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
-	    battery_widget({ 
-		    font = "Source Code Pro 9",
-		    show_current_level = true,
-		    warning_msg_title = "",
-		    warning_msg_icon = "~/.config/awesome/widgets/battery-widget/warning_message_icon.png"
-	    }),
+	    battery_widget,
 	    volume_widget,
             mytextclock,
             s.mylayoutbox,
