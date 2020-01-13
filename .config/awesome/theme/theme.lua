@@ -58,7 +58,7 @@ theme.battery_text_fg = "#eff1f5"
 theme.battery_icon_color = "#eff1f5" 
 theme.battery_warning_bg = "bf616a"
 theme.battery_warning_fg = "eff1f5"
-theme.battery_margin_left = 7
+theme.battery_margin_left = 11
 theme.battery_margin_right = 7
 
 -- Volume
