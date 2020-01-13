@@ -1,19 +1,20 @@
 local awful = require("awful")
 local gears = require("gears")
+local beautiful = require("beautiful")
 local wibox = require("wibox")
 local PATH_TO_ICONS = "/usr/share/icons/Arc/status/symbolic/"
-local font = 'Source Code Pro 9'
-local margin_left = 0
-local margin_right = 0
+local font = beautiful.volume_font
+local margin_left = beautiful.volume_margin_left
+local margin_right = beautiful.volume_margin_right
 
 local icon_widget = wibox.widget {
     {
         id = "icon",
-        image = gears.color.recolor_image(PATH_TO_ICONS .. "audio-volume-muted-symbolic.svg", "#65737e"),
+        image = gears.color.recolor_image(PATH_TO_ICONS .. "audio-volume-muted-symbolic.svg", beautiful.volume_muted_color),
         resize = false,
         widget = wibox.widget.imagebox,
     },
-    layout = wibox.container.margin(_, _, _, 3),
+    layout = wibox.container.margin(_, _, 3, 3),
     set_image = function(self, path)
         self.icon.image = path
     end
@@ -26,7 +27,7 @@ local level_widget = wibox.widget {
 	font = font,
 	widget = wibox.widget.textbox
     },
-    fg = "#eff1f5",
+    fg = beautiful.volume_color,
     widget = wibox.container.background,
     set_text = function(self, text, color)
 	self.level.text = text
@@ -45,7 +46,7 @@ local update = function(stdout, _, _, _)
     elseif (volume < 75) then volume_icon_name="audio-volume-medium-symbolic"
     elseif (volume <= 100) then volume_icon_name="audio-volume-high-symbolic"
     end
-    if toggle == "on" then color = "#eff1f5" else color = "#65737e" end
+    if toggle == "on" then color = beautiful.volume_color else color = beautiful.volume_muted_color end
     level_widget:set_text(string.format("%d%%", volume), color)
     icon_widget:set_image(gears.color.recolor_image(PATH_TO_ICONS .. volume_icon_name .. ".svg", color))
 end

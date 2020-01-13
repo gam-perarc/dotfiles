@@ -53,12 +53,20 @@ theme.prompt_fg = "#eff1f5"
 theme.prompt_bg = "#2b303b"
 
 -- Battery
+theme.battery_font = "Source Code Pro 9"
 theme.battery_text_fg = "#eff1f5"
 theme.battery_icon_color = "#eff1f5" 
 theme.battery_warning_bg = "bf616a"
 theme.battery_warning_fg = "eff1f5"
-theme.battery_margin_left = 10
-theme.battery_margin_right = 10
+theme.battery_margin_left = 5
+theme.battery_margin_right = 5
+
+-- Volume
+theme.volume_font = "Source Code Pro 9"
+theme.volume_color = "#eff1f5"
+theme.volume_muted_color = "#65737e"
+theme.volume_margin_left = 5
+theme.volume_margin_right = 5
 
 -- Menu
 theme.menu_submenu_icon = themes_path.."default/submenu.png"
