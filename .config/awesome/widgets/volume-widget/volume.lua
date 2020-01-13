@@ -20,26 +20,34 @@ local icon_widget = wibox.widget {
 }
 
 local level_widget = wibox.widget {
-    id = "level",
-    text = "0%",
-    font = font,
-    widget = wibox.widget.textbox
+    {
+	id = "level",
+	text = "0%",
+	font = font,
+	widget = wibox.widget.textbox
+    },
+    fg = "#eff1f5",
+    widget = wibox.container.background,
+    set_text = function(self, text, color)
+	self.level.text = text
+	self.fg = color
+    end
 }
 
 local update = function(stdout, _, _, _)
     local mute = string.match(stdout, "%[(o%D%D?)%]")
     local volume = string.match(stdout, "(%d?%d?%d)%%")
     local volume_icon_name
-    local volume_icon_color
+    local color
     volume = tonumber(volume)
     if (volume >= 0 and volume < 25) then volume_icon_name="audio-volume-muted-symbolic"
     elseif (volume < 50) then volume_icon_name="audio-volume-low-symbolic"
     elseif (volume < 75) then volume_icon_name="audio-volume-medium-symbolic"
     elseif (volume <= 100) then volume_icon_name="audio-volume-high-symbolic"
     end
-    if mute == "on" then volume_icon_color = "#65737e" else volume_icon_color = "#eff1f5" end
-    level_widget.text = string.format("%d%%", volume)
-    icon_widget:set_image(gears.color.recolor_image(PATH_TO_ICONS .. volume_icon_name .. ".svg", volume_icon_color))
+    if mute == "on" then color = "#65737e" else color = "#eff1f5" end
+    level_widget:set_text(string.format("%d%%", volume), color)
+    icon_widget:set_image(gears.color.recolor_image(PATH_TO_ICONS .. volume_icon_name .. ".svg", color))
 end
 
 volume_widget = wibox.widget {
