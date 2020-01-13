@@ -268,10 +268,7 @@ awful.screen.connect_for_each_screen(function(s)
 		    warning_msg_title = "",
 		    warning_msg_icon = "~/.config/awesome/widgets/battery-widget/warning_message_icon.png"
 	    }),
-	    volume_widget({
-		    font = "Source Code Pro 9",
-		    volume_audio_controller = 'alsa_only'
-	    }),
+	    volume_widget,
             mytextclock,
             s.mylayoutbox,
         },
@@ -386,18 +383,14 @@ globalkeys = gears.table.join(
               {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"}),
-    
-    -- Volume Keys
-    awful.key({}, "XF86AudioLowerVolume", function ()
-	    awful.util.spawn("amixer -q sset Master 5%-", false)
-    end),
-    awful.key({}, "XF86AudioRaiseVolume", function ()
-	    awful.util.spawn("amixer -q sset Master 5%+", false)
-    end),
-    awful.key({}, "XF86AudioMute", function ()
-	    awful.util.spawn("amixer set Master toggle", false)
-    end) 
+              {description = "show the menubar", group = "launcher"})
+)
+
+-- Volume Keys
+globalkeys = gears.table.join(globalkeys, 
+    awful.key({}, "XF86AudioRaiseVolume", volume_widget.volume_inc),
+    awful.key({}, "XF86AudioLowerVolume", volume_widget.volume_dec),
+    awful.key({}, "XF86AudioMute", volume_widget.volume_toggle)
 )
 
 clientkeys = gears.table.join(
