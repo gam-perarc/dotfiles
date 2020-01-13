@@ -18,7 +18,7 @@ local icon_widget = wibox.widget {
         widget = wibox.widget.imagebox,
         resize = false
     },
-    layout = wibox.container.margin(_, 0, 0, 3)
+    layout = wibox.container.margin(_, 0, 0, 5),
 }
 
 local level_widget = wibox.widget {

@@ -7,15 +7,14 @@ local theme = {}
 
 theme.wallpaper = "~/.config/awesome/theme/wallpaper.jpg"
 theme.font          = "Source Code Pro 9"
-theme.bg_normal     = "#222222"
-theme.bg_focus      = "#535d6c"
-theme.bg_urgent     = "#ff0000"
-theme.bg_minimize   = "#444444"
-theme.bg_systray    = theme.bg_normal
-theme.fg_normal     = "#aaaaaa"
-theme.fg_focus      = "#ffffff"
-theme.fg_urgent     = "#ffffff"
-theme.fg_minimize   = "#ffffff"
+theme.bg_normal     = "#2b303b"
+theme.bg_focus      = "#65737e"
+theme.bg_urgent     = "#bf616a"
+theme.bg_minimize   = "#2b303b"
+theme.fg_normal     = "#eff1f5"
+theme.fg_focus      = "#eff1f5"
+theme.fg_urgent     = "#2b303b"
+theme.fg_minimize   = "#65737e"
 theme.useless_gap   = 10
 theme.border_width  = 3
 theme.border_normal = "#2b303b"
@@ -58,15 +57,19 @@ theme.battery_text_fg = "#eff1f5"
 theme.battery_icon_color = "#eff1f5" 
 theme.battery_warning_bg = "bf616a"
 theme.battery_warning_fg = "eff1f5"
-theme.battery_margin_left = 5
-theme.battery_margin_right = 5
+theme.battery_margin_left = 7
+theme.battery_margin_right = 7
 
 -- Volume
 theme.volume_font = "Source Code Pro 9"
 theme.volume_color = "#eff1f5"
 theme.volume_muted_color = "#65737e"
-theme.volume_margin_left = 5
-theme.volume_margin_right = 5
+theme.volume_margin_left = 7
+theme.volume_margin_right = 7
+
+-- Textclock
+theme.textclock_margin_left = 1
+theme.textclock_margin_right = 5
 
 -- Menu
 theme.menu_submenu_icon = themes_path.."default/submenu.png"
