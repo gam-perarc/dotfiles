@@ -35,7 +35,7 @@ local level_widget = wibox.widget {
 }
 
 local update = function(stdout, _, _, _)
-    local mute = string.match(stdout, "%[(o%D%D?)%]")
+    local toggle = string.match(stdout, "%[(o%D%D?)%]")
     local volume = string.match(stdout, "(%d?%d?%d)%%")
     local volume_icon_name
     local color
@@ -45,7 +45,7 @@ local update = function(stdout, _, _, _)
     elseif (volume < 75) then volume_icon_name="audio-volume-medium-symbolic"
     elseif (volume <= 100) then volume_icon_name="audio-volume-high-symbolic"
     end
-    if mute == "on" then color = "#65737e" else color = "#eff1f5" end
+    if toggle == "on" then color = "#eff1f5" else color = "#65737e" end
     level_widget:set_text(string.format("%d%%", volume), color)
     icon_widget:set_image(gears.color.recolor_image(PATH_TO_ICONS .. volume_icon_name .. ".svg", color))
 end
