@@ -69,7 +69,7 @@ theme.volume_margin_left = 7
 theme.volume_margin_right = 7
 
 -- Textclock
-theme.textclock_margin_left = 1
+theme.textclock_margin_left = 0
 theme.textclock_margin_right = 5
 
 -- Menu
