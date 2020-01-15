@@ -9,17 +9,19 @@ call vundle#begin()
 "      Plugins
 "####################
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-surround'
+Plugin 'w0rp/ale'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'chriskempson/base16-vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'junegunn/fzf.vim'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'chriskempson/base16-vim'
-Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-surround'
 Plugin 'valloric/youcompleteme'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'mattn/emmet-vim'
-Plugin 'junegunn/fzf.vim'
 "####################
 call vundle#end()
 filetype plugin indent on
@@ -61,27 +63,28 @@ highlight LineNr ctermfg=8
 "########################################"
 "            Plugin Settings
 "########################################"
-" NERDTree
-map <C-n> :NERDTreeToggle<CR>
-let NERDTreeMinimalUI = 1
-
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-" Vim-airline
-let g:airline_theme = 'base16_ocean'
-
-" NERDCommenter
-let mapleader=","
-let g:NERDCompactSexyComs = 1
-let g:NERDDefaultAlign = 'left'
-let g:NERDTrimTrailingWhitespace = 1
+" Ale
+let g:ale_linters = {
+\   'c': ['clang'],
+\   'css': ['prettier'],
+\   'dockerfile': ['dockerfile_lint'],
+\   'handlebars': ['prettier'],
+\   'html': ['prettier'],
+\   'java': ['javac'],
+\   'javascript': ['prettier', 'eslint'],
+\   'json': ['prettier'],
+\   'lua': ['luac'],
+\   'markdown': ['prettier'],
+\   'python': ['autopep8'],
+\   'sass': ['sasslint'],
+\   'scss': ['prettier'],
+\   'sh': ['sh-language-server'],
+\   'sql': ['sqlformat'],
+\   'typescript': ['prettier', 'eslint'],
+\   'vim': ['vint'],
+\   'vue': ['prettier'],
+\}
+let g:ale_fix_on_save = 1
 
 " Ctrlp
 let g:ctrlp_custom_ignore = {
@@ -99,4 +102,26 @@ command! -bang -nargs=* Ag
   \		    <bang>0 ? fzf#vim#with_preview('up:60%')
   \		    	    : fzf#vim#with_preview('right:50%:hidden', '?'),
   \		    <bang>0)
+
+" NERDCommenter
+let mapleader=","
+let g:NERDCompactSexyComs = 1
+let g:NERDDefaultAlign = 'left'
+let g:NERDTrimTrailingWhitespace = 1
+
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
+let NERDTreeMinimalUI = 1
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Vim-airline
+let g:airline_theme = 'base16_ocean'
 "########################################"
