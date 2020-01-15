@@ -16,6 +16,10 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'chriskempson/base16-vim'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'valloric/youcompleteme'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'junegunn/fzf.vim'
 "####################
 call vundle#end()
 filetype plugin indent on
@@ -78,4 +82,21 @@ let mapleader=","
 let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
 let g:NERDTrimTrailingWhitespace = 1
+
+" Ctrlp
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\v[\/]\.(git)$',
+    \ 'file': '\v\.(exe|so|dll)$',
+    \ }
+
+" Emmet
+let g:user_emmet_leader_key='<C-Z>'
+let g:user_emmet_mode='a'
+
+" Fzf
+command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>,
+  \		    <bang>0 ? fzf#vim#with_preview('up:60%')
+  \		    	    : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \		    <bang>0)
 "########################################"
