@@ -103,7 +103,6 @@ let g:ale_linters = {
 \   'sh': ['sh-language-server'],
 \   'sql': ['sqlformat'],
 \   'typescript': ['prettier', 'eslint'],
-\   'vim': ['vint'],
 \   'vue': ['prettier'],
 \}
 let g:ale_fixers = {
@@ -123,7 +122,6 @@ let g:ale_fixers = {
 \   'sh': ['sh-language-server'],
 \   'sql': ['sqlformat'],
 \   'typescript': ['prettier', 'eslint'],
-\   'vim': ['vint'],
 \   'vue': ['prettier'],
 \}
 let g:ale_fix_on_save = 1
