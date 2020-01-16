@@ -58,6 +58,28 @@ highlight LineNr ctermfg=8
 
 " Key maps
 :imap jj <Esc>
+
+" Split
+set splitbelow
+set splitright
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Tabs
+au BufNewFile,BufRead *.c,*.cpp,*.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set expandtab |
+    \ set autoindent
+au BufNewFile,BufRead *.js,*.json,*.html,*.css
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2 |
+    \ set noexpandtab |
+    \ set autoindent
 "########################################"
 
 "########################################"
