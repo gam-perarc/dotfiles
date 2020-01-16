@@ -106,6 +106,26 @@ let g:ale_linters = {
 \   'vim': ['vint'],
 \   'vue': ['prettier'],
 \}
+let g:ale_fixers = {
+\   'c': ['clang'],
+\   'css': ['prettier'],
+\   'dockerfile': ['dockerfile_lint'],
+\   'handlebars': ['prettier'],
+\   'html': ['prettier'],
+\   'java': ['javac'],
+\   'javascript': ['prettier', 'eslint'],
+\   'json': ['prettier'],
+\   'lua': ['luac'],
+\   'markdown': ['prettier'],
+\   'python': ['autopep8'],
+\   'sass': ['sasslint'],
+\   'scss': ['prettier'],
+\   'sh': ['sh-language-server'],
+\   'sql': ['sqlformat'],
+\   'typescript': ['prettier', 'eslint'],
+\   'vim': ['vint'],
+\   'vue': ['prettier'],
+\}
 let g:ale_fix_on_save = 1
 
 " Ctrlp
