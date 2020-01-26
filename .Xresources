@@ -10,7 +10,8 @@ URxvt.secondaryScreen: 1
 URxvt.secondaryScroll: 0
 
 ! Font preferenses
-URxvt.font: xft:Source Code Pro:pixelsize=13
+URxvt.font: xft:Source Code Pro:pixelsize=13,\
+	    xft:Symbola:pixelsize=13
 URxvt.boldFont: xft:Source Code Pro:pixelsize=13:weight=bold
 
 ! Appearance
