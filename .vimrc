@@ -55,6 +55,9 @@ set number
 " Color scheme
 let base16colorspace=256
 colorscheme base16-ocean
+set background=dark
+set t_Co=256
+set t_ut=
 highlight clear LineNr
 highlight LineNr ctermfg=8
 
@@ -82,6 +85,12 @@ au BufNewFile,BufRead *.js,*.json,*.html,*.css
     \ set shiftwidth=2 |
     \ set noexpandtab |
     \ set autoindent
+
+" Buffer
+nnoremap gp :bp<CR>
+nnoremap gn :bn<CR>
+nnoremap gl :ls<CR>
+nnoremap gb :ls<CR>:b
 "########################################"
 
 "########################################"
@@ -108,7 +117,6 @@ let g:ale_linters = {
 \   'vue': ['prettier'],
 \}
 let g:ale_fixers = {
-\   'c': ['clang'],
 \   'css': ['prettier'],
 \   'dockerfile': ['dockerfile_lint'],
 \   'handlebars': ['prettier'],
