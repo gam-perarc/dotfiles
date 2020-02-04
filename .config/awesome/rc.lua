@@ -387,9 +387,13 @@ globalkeys = gears.table.join(
                   }
               end,
               {description = "lua execute prompt", group = "awesome"}),
+
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
+              {description = "show the menubar", group = "launcher"}),
+
+    -- Print Screen
+    awful.key({}, "Print", function() awful.spawn("scrot -e 'mv $f ~/screenshots'") end)
 )
 
 -- Volume Keys
