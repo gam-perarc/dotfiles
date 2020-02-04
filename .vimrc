@@ -24,6 +24,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-surround'
 Plugin 'valloric/youcompleteme'
+Plugin 'qpkorr/vim-bufkill'
 "####################
 call vundle#end()
 filetype plugin indent on
@@ -91,6 +92,7 @@ nnoremap gp :bp<CR>
 nnoremap gn :bn<CR>
 nnoremap gl :ls<CR>
 nnoremap gb :ls<CR>:b
+nnoremap gd :BD<CR>
 "########################################"
 
 "########################################"
