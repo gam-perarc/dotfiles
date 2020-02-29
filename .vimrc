@@ -8,6 +8,9 @@ call vundle#begin()
 "####################
 "      Plugins
 "####################
+if has('python3') 
+endif
+Plugin 'sirver/ultisnips'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'w0rp/ale'
 Plugin 'jiangmiao/auto-pairs'
@@ -19,9 +22,10 @@ Plugin 'valloric/matchtagalways'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-Plugin 'sirver/ultisnips'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'maxmellon/vim-jsx-pretty'
+Plugin 'justinj/vim-react-snippets'
 Plugin 'tpope/vim-surround'
 Plugin 'valloric/youcompleteme'
 Plugin 'qpkorr/vim-bufkill'
