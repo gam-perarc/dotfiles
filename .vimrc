@@ -78,6 +78,11 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Tabs
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
 au BufNewFile,BufRead *.c,*.cpp,*.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
@@ -123,6 +128,7 @@ let g:ale_linters = {
 \   'vue': ['prettier'],
 \}
 let g:ale_fixers = {
+\   'cpp': ['clang-format'],
 \   'css': ['prettier'],
 \   'dockerfile': ['dockerfile_lint'],
 \   'handlebars': ['prettier'],
@@ -141,6 +147,7 @@ let g:ale_fixers = {
 \   'vue': ['prettier'],
 \}
 let g:ale_fix_on_save = 1
+let g:ale_c_clangformat_options = '-style="{BasedOnStyle: llvm, IndentWidth: 4}"'
 
 " Ctrlp
 let g:ctrlp_custom_ignore = {
