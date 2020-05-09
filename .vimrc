@@ -21,11 +21,13 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'valloric/matchtagalways'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
+Plugin 'philrunninger/nerdtree-visual-selection'
 Plugin 'scrooloose/syntastic'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'maxmellon/vim-jsx-pretty'
-Plugin 'justinj/vim-react-snippets'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'epilande/vim-react-snippets'
 Plugin 'tpope/vim-surround'
 Plugin 'valloric/youcompleteme'
 Plugin 'qpkorr/vim-bufkill'
@@ -191,4 +193,15 @@ let g:UltiSnipsEditSplit="vertical"
 
 " Vim-airline
 let g:airline_theme = 'base16_ocean'
+
+" Vim-multiple-cursors
+let g:multi_cursor_use_default_mapping = 0
+let g:multi_cursor_start_word_key      = '<C-m>'
+let g:multi_cursor_select_all_word_key = '<A-m>'
+let g:multi_cursor_start_key           = 'g<C-m>'
+let g:multi_cursor_select_all_key      = 'g<A-m>'
+let g:multi_cursor_next_key            = '<C-m>'
+let g:multi_cursor_prev_key            = '<C-[>'
+let g:multi_cursor_skip_key            = '<C-x>'
+let g:multi_cursor_quit_key            = '<Esc>'
 "########################################"
