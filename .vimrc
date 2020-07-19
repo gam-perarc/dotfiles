@@ -99,6 +99,10 @@ nnoremap tj :tabprev<CR>
 nnoremap th :tabfirst<CR>
 nnoremap tl :tablast<CR>
 nnoremap tp :tabclose<CR>
+highlight TabLineFill ctermfg=grey
+highlight TabLine cterm=bold ctermbg=darkgrey ctermfg=black
+highlight TabLineSel ctermbg=3 ctermfg=black
+highlight Title ctermfg=black
 
 " Identation
 set tabstop=4
