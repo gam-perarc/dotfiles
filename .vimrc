@@ -187,6 +187,9 @@ nmap ]A :ALELast
 nmap [A :ALEFirst
 let g:ale_javascript_prettier_options = '--single-quote --trailing-comma all'
 
+" Colorizer
+nnoremap <leader>co :ColorToggle<CR>
+
 " Ctrlp
 let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v[\/]\.(git)$',
