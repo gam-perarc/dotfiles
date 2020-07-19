@@ -91,6 +91,14 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Tabs
+nnoremap tn :tabnew<Space>
+nnoremap tk :tabnext<CR>
+nnoremap tj :tabprev<CR>
+nnoremap th :tabfirst<CR>
+nnoremap tl :tablast<CR>
+nnoremap tp :tabclose<CR>
+
+" Identation
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
