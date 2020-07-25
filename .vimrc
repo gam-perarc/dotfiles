@@ -254,10 +254,38 @@ let g:airline_theme = 'wombat'
 let g:airline_powerline_fonts = 1
 
 " Vim-fugitive
-hi DiffAdd cterm=bold ctermfg=black ctermbg=green
-hi DiffDelete cterm=bold ctermfg=none ctermbg=red
+nnoremap <leader>gd :Gvdiffsplit!<CR>
+nnoremap gdh :diffget //2<CR>
+vnoremap gdh :diffget //2<CR>
+nnoremap gdl :diffget //3<CR>
+vnoremap gdl :diffget //3<CR>
+nnoremap gdp :diffput<CR>
+vnoremap gdp :diffput<CR>
+nnoremap <leader>gv :Gvdiff<CR>
+nnoremap <leader>gs :tab G<CR>
+nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gr :Gread<CR>
+nnoremap <leader>gw :Gwrite<CR><CR>
+nnoremap <leader>gb :Git branch<Space>
+nnoremap <leader>go :Git checkout<Space>
+nnoremap <leader>gps :terminal git push<CR>
+nnoremap <leader>gpl :terminal git pull<CR>
+hi DiffAdd cterm=none ctermfg=green ctermbg=none
+hi DiffDelete cterm=none ctermfg=red ctermbg=none
 hi DiffChange cterm=bold ctermfg=none ctermbg=black
-hi DiffText cterm=bold ctermfg=black ctermbg=darkmagenta
+hi DiffText cterm=bold ctermfg=darkmagenta ctermbg=black
+
+" Vim-fugitive. Split file in new tab.
+function SplitInNewTab()
+    let file = split(getline("."))[1]
+    execute ":tabnew"
+    execute ":e" file
+    execute ":Gvdiffsplit!"
+endfunction
+augroup FugitiveMappings
+  autocmd!
+  autocmd FileType fugitive nmap <buffer> + :call<Space>SplitInNewTab()<CR>
+augroup
 
 " Vim-multiple-cursors
 let g:multi_cursor_use_default_mapping = 0
