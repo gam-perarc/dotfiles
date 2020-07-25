@@ -48,6 +48,9 @@ filetype plugin indent on
 "########################################"
 " 	       Settings
 "########################################"
+" Leader
+let mapleader=","
+
 " Clipboard
 vnoremap <C-c> "+y
 
@@ -217,7 +220,6 @@ command! -bang -nargs=* Ag
 nnoremap <C-p> :Files<CR> 
 
 " NERDCommenter
-let mapleader=","
 let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
 let g:NERDTrimTrailingWhitespace = 1
