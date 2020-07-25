@@ -70,13 +70,14 @@ set mouse=a
 
 " Line numbers
 set number relativenumber
+set cursorline
 highlight LineNr ctermfg=14
 augroup numbertoggle
   autocmd!
   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
-hi CursorLineNr cterm=NONE ctermfg=6
+hi CursorLineNr cterm=NONE ctermbg=black ctermfg=grey
 hi CursorLine cterm=NONE ctermbg=black
 
 set t_ZH=[3m
