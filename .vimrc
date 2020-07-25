@@ -24,9 +24,11 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'philrunninger/nerdtree-visual-selection'
 Plugin 'scrooloose/syntastic'
+Plugin 'majutsushi/tagbar'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mvolkmann/vim-js-arrow-function'
 Plugin 'elzr/vim-json'
@@ -237,6 +239,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" Tagbar
+nnoremap tg :TagbarToggle<CR>
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<c-j>"
