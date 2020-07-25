@@ -197,7 +197,7 @@ nmap ]a :ALENextWrap<CR>
 nmap [a :ALEPreviousWrap<CR>
 nmap ]A :ALELast
 nmap [A :ALEFirst
-let g:ale_javascript_prettier_options = '--single-quote --trailing-comma all'
+let g:ale_javascript_prettier_options = '--double-quote --trailing-comma all'
 
 " Colorizer
 nnoremap <leader>co :ColorToggle<CR>
