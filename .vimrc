@@ -129,7 +129,7 @@ au BufNewFile,BufRead *.c,*.cpp,*.py
     \ set shiftwidth=4 |
     \ set expandtab |
     \ set autoindent
-au BufNewFile,BufRead *.js,*.json,*.html,*.css
+au BufNewFile,BufRead *.js,*.jsx,*.ts,*.tsx,*.json,*.html,*.css
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
