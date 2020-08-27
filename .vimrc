@@ -175,7 +175,8 @@ let g:ale_linters = {
 \   'scss': ['prettier'],
 \   'sh': ['sh-language-server'],
 \   'sql': ['sqlformat'],
-\   'typescript': ['prettier', 'eslint'],
+\   'typescript': ['prettier'],
+\   'typescriptreact': ['prettier'],
 \}
 let g:ale_fixers = {
 \   'css': ['prettier'],
@@ -188,7 +189,8 @@ let g:ale_fixers = {
 \   'scss': ['prettier'],
 \   'sh': ['sh-language-server'],
 \   'sql': ['sqlformat'],
-\   'typescript': ['prettier', 'eslint'],
+\   'typescript': ['prettier'],
+\   'typescriptreact': ['prettier'],
 \}
 let g:ale_fix_on_save = 1
 let g:ale_c_clangformat_options = '-style="{BasedOnStyle: llvm, IndentWidth: 4}"'
