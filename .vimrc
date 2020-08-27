@@ -63,7 +63,7 @@ vnoremap <C-c> "+y
 filetype plugin on
 syntax on
 
-" Identation
+" Indentation
 filetype indent on
 
 " Visual wrapping
@@ -117,7 +117,7 @@ highlight TabLine cterm=bold ctermbg=darkgrey ctermfg=black
 highlight TabLineSel ctermbg=3 ctermfg=black
 highlight Title ctermfg=black
 
-" Identation
+" Indentation
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
