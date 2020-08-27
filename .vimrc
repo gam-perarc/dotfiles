@@ -79,8 +79,8 @@ set cursorline
 highlight LineNr ctermfg=14
 augroup numbertoggle
   autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber cursorline
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber nocursorline
 augroup END
 hi CursorLineNr cterm=NONE ctermbg=black ctermfg=grey
 hi CursorLine cterm=NONE ctermbg=black
