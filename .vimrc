@@ -198,13 +198,13 @@ let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '⚠'
 highlight ALEErrorSign ctermbg=NONE ctermfg=red
 highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
-highlight ALEError cterm=italic ctermbg=NONE ctermfg=NONE
-highlight ALEWarning cterm=italic ctermbg=NONE ctermfg=NONE
+highlight ALEError cterm=underline ctermbg=NONE ctermfg=NONE
+highlight ALEWarning cterm=underline ctermbg=NONE ctermfg=NONE
 nmap ]a :ALENextWrap<CR>
 nmap [a :ALEPreviousWrap<CR>
-nmap ]A :ALELast
-nmap [A :ALEFirst
-let g:ale_javascript_prettier_options = '--double-quote --trailing-comma all'
+nmap ]A :ALELast<CR>
+nmap [A :ALEFirst<CR>
+let g:ale_javascript_prettier_use_local_config = 1
 
 " Colorizer
 nnoremap <leader>co :ColorToggle<CR>
