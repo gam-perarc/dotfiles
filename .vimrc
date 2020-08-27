@@ -271,8 +271,10 @@ vnoremap gdp :diffput<CR>
 nnoremap <leader>gv :Gvdiff<CR>
 nnoremap <leader>gs :tab G<CR>
 nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>ge :Gedit
 nnoremap <leader>gr :Gread<CR>
 nnoremap <leader>gw :Gwrite<CR><CR>
+nnoremap <leader>gl :Glog<CR>
 nnoremap <leader>gb :Git branch<Space>
 nnoremap <leader>go :Git checkout<Space>
 nnoremap <leader>gps :terminal git push<CR>
@@ -292,7 +294,17 @@ endfunction
 augroup FugitiveMappings
   autocmd!
   autocmd FileType fugitive nmap <buffer> + :call<Space>SplitInNewTab()<CR>
-augroup
+  autocmd FileType git nmap <buffer> M O<C-w>H
+augroup END
+
+" Vim-fugitive. Map '..' to open parent tree.
+autocmd User fugitive
+  \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+  \   nnoremap <buffer> .. :edit %:h<CR> |
+  \ endif
+
+" Vim-fugitive. Auto-clean fugitive buffers.
+autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " Vim-multiple-cursors
 let g:multi_cursor_use_default_mapping = 0
