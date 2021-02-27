@@ -29,6 +29,7 @@ Plugin 'quramy/tsuquyomi'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'delphinus/vim-firestore'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'pangloss/vim-javascript'
@@ -39,6 +40,7 @@ Plugin 'jdkanani/vim-material-theme'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'tpope/vim-repeat'
+Plugin 'mhinz/vim-startify'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'valloric/youcompleteme'
@@ -129,7 +131,7 @@ au BufNewFile,BufRead *.c,*.cpp,*.py
     \ set shiftwidth=4 |
     \ set expandtab |
     \ set autoindent
-au BufNewFile,BufRead *.js,*.jsx,*.ts,*.tsx,*.json,*.html,*.css
+au BufNewFile,BufRead *.js,*.jsx,*.ts,*.tsx,*.json,*.html,*.css,*.rules
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
@@ -173,7 +175,7 @@ let g:ale_linters = {
 \   'python': ['autopep8'],
 \   'sass': ['sasslint'],
 \   'scss': ['prettier'],
-\   'sh': ['sh-language-server'],
+\   'sh': ['shfmt'],
 \   'sql': ['sqlformat'],
 \   'typescript': ['prettier'],
 \   'typescriptreact': ['prettier'],
@@ -187,7 +189,7 @@ let g:ale_fixers = {
 \   'python': ['autopep8'],
 \   'sass': ['sasslint'],
 \   'scss': ['prettier'],
-\   'sh': ['sh-language-server'],
+\   'sh': ['shfmt'],
 \   'sql': ['sqlformat'],
 \   'typescript': ['prettier'],
 \   'typescriptreact': ['prettier'],
@@ -266,6 +268,8 @@ nnoremap gdh :diffget //2<CR>
 vnoremap gdh :diffget //2<CR>
 nnoremap gdl :diffget //3<CR>
 vnoremap gdl :diffget //3<CR>
+nnoremap gdg :diffget<CR>
+vnoremap gdg :diffget<CR>
 nnoremap gdp :diffput<CR>
 vnoremap gdp :diffput<CR>
 nnoremap <leader>gv :Gvdiff<CR>
@@ -316,6 +320,15 @@ let g:multi_cursor_next_key            = '<C-m>'
 let g:multi_cursor_prev_key            = '<C-[>'
 let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
+
+" Vim-startify
+let g:startify_lists = [
+      \ { 'type': 'files',     'header': ['   Files']            },
+      \ { 'type': 'dir',       'header': ['   Current directory '. getcwd()] },
+      \ { 'type': 'sessions',  'header': ['   Sessions']       },
+      \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+      \ { 'type': 'commands',  'header': ['   Commands']       },
+      \ ]
 
 " YouCompleteMe
 nnoremap <leader>gr :YcmCompleter GoToReferences<CR>
