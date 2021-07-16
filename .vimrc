@@ -230,7 +230,6 @@ command! -bang -nargs=* Ag
 nnoremap <C-p> :Files<CR> 
 
 " NERDCommenter
-let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
 let g:NERDTrimTrailingWhitespace = 1
 let g:NERDCustomDelimiters={
