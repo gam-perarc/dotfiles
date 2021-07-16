@@ -273,7 +273,7 @@ nnoremap gdp :diffput<CR>
 vnoremap gdp :diffput<CR>
 nnoremap <leader>gv :Gvdiff<CR>
 nnoremap <leader>gs :tab G<CR>
-nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gc :Git commit<CR>
 nnoremap <leader>ge :Gedit
 nnoremap <leader>gr :Gread<CR>
 nnoremap <leader>gw :Gwrite<CR><CR>
