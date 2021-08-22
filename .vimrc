@@ -202,6 +202,7 @@ let g:ale_fixers = {
 \   'typescriptreact': ['prettier'],
 \   'yaml': ['prettier'],
 \}
+let g:ale_disable_lsp = 1
 let g:ale_fix_on_save = 1
 let g:ale_c_clangformat_options = '-style="{BasedOnStyle: llvm, IndentWidth: 4}"'
 let g:ale_sign_error = '✘'
