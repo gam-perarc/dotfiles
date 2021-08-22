@@ -98,6 +98,7 @@ alias zshrc="vim ~/.zshrc"
 alias vimrc="vim ~/.vimrc"
 alias tmuxrc="vim ~/.tmux.conf.local"
 alias android="~/android-studio/bin/studio.sh"
+alias vim="nvim"
 
 # load directory colors config
 eval "$(dircolors ~/.dircolors)";
