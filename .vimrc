@@ -156,7 +156,7 @@ endif
 
 " Font
 set encoding=utf8
-set guifont=JetBrainsMono\ Nerd\ Font\ 11
+
 " Support true color
 if exists('+termguicolors')
   let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
