@@ -99,6 +99,7 @@ alias vimrc="vim ~/.vimrc"
 alias tmuxrc="vim ~/.tmux.conf.local"
 alias android="~/android-studio/bin/studio.sh"
 alias vim="nvim"
+alias cfg="GIT_DIR=$HOME/.cfg GIT_WORK_TREE=$HOME vim"
 
 # load directory colors config
 eval "$(dircolors ~/.dircolors)";
