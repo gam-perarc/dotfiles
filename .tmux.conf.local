@@ -283,3 +283,27 @@ unbind C-a
 bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"
 
 set -g default-terminal "xterm-256color-italic"
+# -- tpm -----------------------------------------------------------------------
+
+# whenever a plugin introduces a variable to be used in 'status-left' or
+# 'status-right', you can use it in 'tmux_conf_theme_status_left' and
+# 'tmux_conf_theme_status_right' variables.
+
+# by default, launching tmux will update tpm and all plugins
+#   - true (default)
+#   - false
+tmux_conf_update_plugins_on_launch=true
+
+# by default, reloading the configuration will update tpm and all plugins
+#   - true (default)
+#   - false
+tmux_conf_update_plugins_on_reload=true
+
+# /!\ do not add set -g @plugin 'tmux-plugins/tpm'
+# /!\ do not add run '~/.tmux/plugins/tpm/tpm'
+
+# to enable a plugin, use the 'set -g @plugin' syntax:
+# visit https://github.com/tmux-plugins for available plugins
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin "arcticicestudio/nord-tmux"
+set -g @plugin 'tmux-plugins/tmux-sidebar'
