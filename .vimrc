@@ -45,7 +45,6 @@ Plugin 'tpope/vim-repeat'
 Plugin 'mhinz/vim-startify'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'valloric/youcompleteme'
 Plugin 'qpkorr/vim-bufkill'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'xavierchow/vim-swagger-preview'
@@ -517,9 +516,4 @@ let g:startify_lists = [
       \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
       \ { 'type': 'commands',  'header': ['   Commands']       },
       \ ]
-
-" YouCompleteMe
-nnoremap <leader>gr :YcmCompleter GoToReferences<CR>
-nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
-let g:ycm_auto_hover = ''
 "########################################"
