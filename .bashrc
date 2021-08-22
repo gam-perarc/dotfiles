@@ -124,3 +124,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # dotfiles
 alias config='/usr/bin/git --git-dir=/home/gam/.cfg/ --work-tree=/home/gam'
+. "$HOME/.cargo/env"

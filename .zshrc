@@ -133,3 +133,6 @@ export TERM=xterm-256color-italic
 
 # dotfiles
 alias config='/usr/bin/git --git-dir=/home/gam/.cfg/ --work-tree=/home/gam'
+
+# add ${ZDOTDIR:-~}/.zsh_functions as fpath reference
+fpath+=${ZDOTDIR:-~}/.zsh_functions
