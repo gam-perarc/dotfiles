@@ -84,9 +84,6 @@ augroup numbertoggle
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber nocursorline
 augroup END
 
-set t_ZH=[3m
-set t_ZR=[23m
-
 " Key maps
 :imap jj <Esc>
 
@@ -390,12 +387,6 @@ command! -nargs=0 Swagger :CocCommand swagger.render
 
 " Colorizer
 nnoremap <leader>co :ColorToggle<CR>
-
-" Ctrlp
-let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v[\/]\.(git)$',
-    \ 'file': '\v\.(exe|so|dll)$',
-    \ }
 
 " Emmet
 let g:user_emmet_leader_key='<C-Z>'
