@@ -110,10 +110,6 @@ eval "$(dircolors ~/.dircolors)";
 export FZF_DEFAULT_COMMAND='ag . --hidden --ignore="*node_modules/*" --ignore=".git/*" -g ""'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-# set terminal color.
-# required for oh my tmux.
-export TERM=xterm-256color
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/gam/google-cloud-sdk/path.zsh.inc' ]; then . '/home/gam/google-cloud-sdk/path.zsh.inc'; fi
 
@@ -128,8 +124,6 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-export TERM=xterm-256color-italic
 
 # dotfiles
 alias config='/usr/bin/git --git-dir=/home/gam/.cfg/ --work-tree=/home/gam'
