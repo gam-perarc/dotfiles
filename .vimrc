@@ -25,6 +25,7 @@ Plugin 'valloric/matchtagalways'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'philrunninger/nerdtree-visual-selection'
+Plugin 'arcticicestudio/nord-vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'majutsushi/tagbar'
 Plugin 'quramy/tsuquyomi'
@@ -38,7 +39,6 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mvolkmann/vim-js-arrow-function'
 Plugin 'elzr/vim-json'
 Plugin 'maxmellon/vim-jsx-pretty'
-Plugin 'jdkanani/vim-material-theme'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'tpope/vim-repeat'
@@ -79,21 +79,14 @@ set mouse=a
 " Line numbers
 set number relativenumber
 set cursorline
-highlight LineNr ctermfg=14
 augroup numbertoggle
   autocmd!
   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber cursorline
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber nocursorline
 augroup END
-hi CursorLineNr cterm=NONE ctermbg=black ctermfg=grey
-hi CursorLine cterm=NONE ctermbg=black
 
 set t_ZH=[3m
 set t_ZR=[23m
-
-" Tmux will not affect color scheme 
-set background=dark
-set t_Co=256
 
 " Key maps
 :imap jj <Esc>
@@ -168,6 +161,12 @@ endif
 " Font
 set encoding=utf8
 set guifont=JetBrainsMono\ Nerd\ Font\ 11
+" Support true color
+if exists('+termguicolors')
+  let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 "########################################"
 
 "########################################"
@@ -427,6 +426,10 @@ map <C-n> :NERDTreeToggle<CR>
 let NERDTreeMinimalUI = 1
 let NERDTreeShowLineNumbers=1
 
+" Nord-vim
+let g:nord_cursor_line_number_background = 1
+colorscheme nord
+
 " Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -444,7 +447,7 @@ let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsEditSplit="vertical"
 
 " Vim-airline
-let g:airline_theme = 'wombat'
+let g:airline_theme = 'nord'
 let g:airline_powerline_fonts = 1
 
 " Vim-fugitive
