@@ -20,6 +20,7 @@ Plugin 'neoclide/coc.nvim'
 Plugin 'chrisbra/colorizer'
 Plugin 'mattn/emmet-vim'
 Plugin 'junegunn/fzf.vim'
+Plugin 'Yggdroot/indentLine'
 Plugin 'valloric/matchtagalways'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
@@ -47,6 +48,8 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'valloric/youcompleteme'
 Plugin 'qpkorr/vim-bufkill'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'xavierchow/vim-swagger-preview'
+Plugin 'stephpy/vim-yaml'
 Plugin 'HerringtonDarkholme/yats'
 "####################
 call vundle#end()
@@ -65,9 +68,6 @@ vnoremap <C-c> "+y
 " Syntax highlighting
 filetype plugin on
 syntax on
-
-" Indentation
-filetype indent on
 
 " Visual wrapping
 set linebreak
@@ -121,6 +121,7 @@ highlight TabLineSel ctermbg=3 ctermfg=black
 highlight Title ctermfg=black
 
 " Indentation
+filetype indent on
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -137,6 +138,12 @@ au BufNewFile,BufRead *.js,*.jsx,*.ts,*.tsx,*.json,*.html,*.css,*.rules
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
     \ set noexpandtab |
+    \ set autoindent
+au BufNewFile,BufRead *.yml,*.yaml
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2 |
+    \ set expandtab |
     \ set autoindent
 
 " Buffer
@@ -180,6 +187,7 @@ let g:ale_linters = {
 \   'sql': ['sqlformat'],
 \   'typescript': ['prettier'],
 \   'typescriptreact': ['prettier'],
+\   'yaml': ['prettier'],
 \}
 let g:ale_fixers = {
 \   'css': ['prettier'],
@@ -194,6 +202,7 @@ let g:ale_fixers = {
 \   'sql': ['sqlformat'],
 \   'typescript': ['prettier'],
 \   'typescriptreact': ['prettier'],
+\   'yaml': ['prettier'],
 \}
 let g:ale_fix_on_save = 1
 let g:ale_c_clangformat_options = '-style="{BasedOnStyle: llvm, IndentWidth: 4}"'
@@ -401,6 +410,10 @@ command! -bang -nargs=* Ag
   \		    	    : fzf#vim#with_preview('right:50%:hidden', '?'),
   \		    <bang>0)
 nnoremap <C-p> :Files<CR> 
+
+" IndentLine
+let g:indentLine_fileType = ['yml', 'yaml']
+let g:indentLine_char = '⦙'
 
 " NERDCommenter
 let g:NERDDefaultAlign = 'left'
