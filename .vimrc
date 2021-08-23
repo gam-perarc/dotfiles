@@ -104,10 +104,6 @@ nnoremap tj :tabprev<CR>
 nnoremap th :tabfirst<CR>
 nnoremap tl :tablast<CR>
 nnoremap tp :tabclose<CR>
-highlight TabLineFill ctermfg=grey
-highlight TabLine cterm=bold ctermbg=darkgrey ctermfg=black
-highlight TabLineSel ctermbg=3 ctermfg=black
-highlight Title ctermfg=black
 
 " Indentation
 filetype indent on
@@ -195,10 +191,6 @@ let g:ale_fix_on_save = 1
 let g:ale_c_clangformat_options = '-style="{BasedOnStyle: llvm, IndentWidth: 4}"'
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '⚠'
-highlight ALEErrorSign ctermbg=NONE ctermfg=red
-highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
-highlight ALEError cterm=underline ctermbg=NONE ctermfg=NONE
-highlight ALEWarning cterm=underline ctermbg=NONE ctermfg=NONE
 nmap ]a :ALENextWrap<CR>
 nmap [a :ALEPreviousWrap<CR>
 nmap ]A :ALELast<CR>
@@ -453,10 +445,6 @@ nnoremap <leader>gb :Git branch<Space>
 nnoremap <leader>go :Git checkout<Space>
 nnoremap <leader>gps :terminal git push<CR>
 nnoremap <leader>gpl :terminal git pull<CR>
-hi DiffAdd cterm=none ctermfg=green ctermbg=none
-hi DiffDelete cterm=none ctermfg=red ctermbg=none
-hi DiffChange cterm=bold ctermfg=none ctermbg=black
-hi DiffText cterm=bold ctermfg=darkmagenta ctermbg=black
 
 " Vim-fugitive. Split file in new tab.
 function SplitInNewTab()
