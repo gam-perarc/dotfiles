@@ -94,12 +94,13 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias zshrc="vim ~/.zshrc"
-alias vimrc="vim ~/.vimrc"
-alias tmuxrc="vim ~/.tmux.conf.local"
-alias android="~/android-studio/bin/studio.sh"
 alias vim="nvim"
 alias cfg="GIT_DIR=$HOME/.cfg GIT_WORK_TREE=$HOME vim"
+alias zshrc="cfg ~/.zshrc"
+alias vimrc="cfg ~/.vimrc"
+alias tmuxrc="cfg ~/.tmux.conf.local"
+alias alacirttyrc="cfg ~/.alacritty.yml"
+alias android="~/android-studio/bin/studio.sh"
 
 # load directory colors config
 eval "$(dircolors ~/.dircolors)";
