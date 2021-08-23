@@ -40,7 +40,7 @@ if [ -f '/home/gam/google-cloud-sdk/path.zsh.inc' ]; then . '/home/gam/google-cl
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/gam/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/gam/google-cloud-sdk/completion.zsh.inc'; fi
 
-# NVM
+# nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
