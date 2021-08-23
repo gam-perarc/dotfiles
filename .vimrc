@@ -56,7 +56,7 @@ filetype plugin indent on
 "########################################"
 
 "########################################"
-"	         General Settings
+"            General Settings
 "########################################"
 " Leader
 let mapleader=","
