@@ -99,7 +99,7 @@ alias cfg="GIT_DIR=$HOME/.cfg GIT_WORK_TREE=$HOME vim"
 alias zshrc="cfg ~/.zshrc"
 alias vimrc="cfg ~/.vimrc"
 alias tmuxrc="cfg ~/.tmux.conf.local"
-alias alacirttyrc="cfg ~/.alacritty.yml"
+alias alacrittyrc="cfg ~/.alacritty.yml"
 alias android="~/android-studio/bin/studio.sh"
 
 # load directory colors config
