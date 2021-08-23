@@ -23,27 +23,20 @@ tmux_conf_new_session_prompt=true
 
 # -- display -------------------------------------------------------------------
 
-# RGB 24-bit colour support (tmux >= 2.2), possible values are:
-#  - true
-#  - false (default)
+# RGB 24-bit colour support (tmux >= 2.2)
 tmux_conf_theme_24b_colour=true
 
 # window style
 tmux_conf_theme_window_fg='default'
 tmux_conf_theme_window_bg='default'
 
-# highlight focused pane (tmux >= 2.1), possible values are:
-#   - true
-#   - false (default)
+# highlight focused pane (tmux >= 2.1)
 tmux_conf_theme_highlight_focused_pane=false
 
 # focused pane colours:
 #tmux_conf_theme_focused_pane_fg='default'
 #tmux_conf_theme_focused_pane_bg='#0087d7'               # light blue
 
-# pane border style, possible values are:
-#   - thin (default)
-#   - fat
 tmux_conf_theme_pane_border_style=thin
 
 # pane borders colours:
@@ -128,12 +121,6 @@ tmux_conf_theme_window_status_bell_attr='blink,bold'
 #tmux_conf_theme_window_status_last_fg='#00afff'         # light blue
 tmux_conf_theme_window_status_last_bg='default'
 tmux_conf_theme_window_status_last_attr='none'
-
-# status left/right sections separators
-#tmux_conf_theme_left_separator_main='\uE0B0'
-#tmux_conf_theme_left_separator_sub='\uE0B1'
-#tmux_conf_theme_right_separator_main='\uE0B2'
-#tmux_conf_theme_right_separator_sub='\uE0B3'
 
 # status left/right content:
 #   - separate main sections with '|'
@@ -252,28 +239,6 @@ tmux_conf_copy_to_os_clipboard=false
 
 
 # -- user customizations -------------------------------------------------------
-# this is the place to override or undo settings
-
-# increase history size
-#set -g history-limit 10000
-
-# start with mouse mode enabled
-#set -g mouse on
-
-# force Vi mode
-#   really you should export VISUAL or EDITOR environment variable, see manual
-#set -g status-keys vi
-#set -g mode-keys vi
-
-# replace C-b by C-a instead of using both prefixes
-# set -gu prefix2
-# unbind C-a
-# unbind C-b
-# set -g prefix C-a
-# bind C-a send-prefix
-
-# move status line to top
-#set -g status-position top
 
 # unbind C-a
 set -gu prefix2
@@ -288,25 +253,13 @@ set -ga terminal-overrides ',*256col*:Tc'
 
 # -- tpm -----------------------------------------------------------------------
 
-# whenever a plugin introduces a variable to be used in 'status-left' or
-# 'status-right', you can use it in 'tmux_conf_theme_status_left' and
-# 'tmux_conf_theme_status_right' variables.
+# launching tmux will not update tpm and all plugins
+tmux_conf_update_plugins_on_launch=false
 
-# by default, launching tmux will update tpm and all plugins
-#   - true (default)
-#   - false
-tmux_conf_update_plugins_on_launch=true
-
-# by default, reloading the configuration will update tpm and all plugins
-#   - true (default)
-#   - false
+# reloading the configuration will update tpm and all plugins
 tmux_conf_update_plugins_on_reload=true
 
-# /!\ do not add set -g @plugin 'tmux-plugins/tpm'
-# /!\ do not add run '~/.tmux/plugins/tpm/tpm'
-
-# to enable a plugin, use the 'set -g @plugin' syntax:
-# visit https://github.com/tmux-plugins for available plugins
+# plugins
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin "arcticicestudio/nord-tmux"
 set -g @plugin 'tmux-plugins/tmux-sidebar'
