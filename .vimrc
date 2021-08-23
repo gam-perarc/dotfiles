@@ -56,7 +56,7 @@ filetype plugin indent on
 "########################################"
 
 "########################################"
-" 	       General Settings
+"  	        General Settings
 "########################################"
 " Leader
 let mapleader=","
@@ -84,7 +84,7 @@ augroup numbertoggle
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber nocursorline
 augroup END
 
-" Key maps
+" Map escape key
 :imap jj <Esc>
 
 " Split
@@ -477,6 +477,7 @@ function SplitInNewTab()
     execute ":e" file
     execute ":Gvdiffsplit!"
 endfunction
+
 augroup FugitiveMappings
   autocmd!
   autocmd FileType fugitive nmap <buffer> + :call<Space>SplitInNewTab()<CR>
