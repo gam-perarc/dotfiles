@@ -469,6 +469,9 @@ autocmd User fugitive
 " Vim-fugitive. Auto-clean fugitive buffers.
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
+" Vim-json
+let g:vim_json_warnings=0
+
 " Vim-multiple-cursors
 let g:multi_cursor_use_default_mapping = 0
 let g:multi_cursor_start_word_key      = '<C-m>'
