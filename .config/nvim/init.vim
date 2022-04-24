@@ -7,7 +7,7 @@ Plug 'dense-analysis/ale'
 Plug 'jiangmiao/auto-pairs'
 Plug 'chrisbra/colorizer'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'javascript', 'javascriptreact'] }
-Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'phaazon/hop.nvim'
 Plug 'Yggdroot/indentLine'
