@@ -6,8 +6,9 @@ function git#SplitInNewTab()
     execute ":Gvdiffsplit!"
 endfunction
 
+" TODO: add check if within git repository
 function git#ListFiles()
-  if $GIT_DIR == "/Users/tids.user/.cfg"
+  if $GIT_DIR == "/home/gam/.cfg"
     execute ":GFiles"
   else
     execute "lua require('telescope.builtin').git_files()"
