@@ -7,9 +7,6 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 vim.o.completeopt = 'menu,menuone,noselect'
 
-local sumneko_root_path = "/home/gam/lua-language-server"
-local sumneko_binary = sumneko_root_path .. "/bin/lua-language-server"
-
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
