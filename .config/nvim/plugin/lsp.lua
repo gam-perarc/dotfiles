@@ -30,7 +30,7 @@ local servers = {
     jsonls = {},
     sumneko_lua = sumneko_lua_config,
     tsserver = {},
-    yamlls = {}
+    yamlls = {} -- TODO: add docker-compose schema
 }
 
 local on_attach = function(client, bufnr)
