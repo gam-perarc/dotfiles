@@ -11,6 +11,10 @@ local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
+local dockerls_config = {
+    root_dir = nvim_lsp.util.root_pattern("Dockerfile", "Dockerfile.dev")
+}
+
 local sumneko_lua_config = {
     settings = {
         Lua = {
@@ -24,9 +28,7 @@ local sumneko_lua_config = {
 
 local servers = {
     bashls = {},
-    dockerls = {
-        root_dir = nvim_lsp.util.root_pattern("Dockerfile", "Dockerfile.dev")
-    },
+    dockerls = dockerls_config,
     jsonls = {},
     sumneko_lua = sumneko_lua_config,
     tsserver = {},
