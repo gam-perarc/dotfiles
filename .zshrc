@@ -26,6 +26,7 @@ alias alacrittyrc="cfg ~/.alacritty.yml"
 alias android="~/android-studio/bin/studio.sh"
 alias config='/usr/bin/git --git-dir=/home/gam/.cfg/ --work-tree=/home/gam'
 alias luamake=/home/gam/lua-language-server/3rd/luamake/luamake
+alias lg='lazygit'
 
 # load directory colors config
 eval "$(dircolors ~/.dircolors)";
