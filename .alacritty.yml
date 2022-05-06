@@ -45,5 +45,8 @@ colors:
     cyan: "#8FBCBB"
     white: "#ECEFF4"
 
+mouse:
+  hide_when_typing: true
+
 key_bindings:
   - { key: M, mods: Shift|Alt, action: ToggleFullscreen }
