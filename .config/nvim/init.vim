@@ -23,6 +23,7 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 Plug 'nvim-lua/plenary.nvim'
+Plug 'kyazdani42/nvim-tree.lua'
 Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
 Plug 'nvim-telescope/telescope.nvim'
