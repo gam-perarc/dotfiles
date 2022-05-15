@@ -188,11 +188,11 @@ nnoremap <leader><C-n> :NvimTreeFindFile<CR>
 nnoremap <leader>fn :NvimTreeFocus<CR>
 let g:nvim_tree_highlight_opened_files = 1
 
-let g:nvim_tree_icons = {
-    \ 'folder': {
-    \   'arrow_open': "▾",
-    \   'arrow_closed': "▸",
-    \   }
+let g:nvim_tree_show_icons = {
+    \ 'git': 1,
+    \ 'folders': 1,
+    \ 'files': 1,
+    \ 'folder_arrows': 0,
     \ }
 
 lua << EOF
