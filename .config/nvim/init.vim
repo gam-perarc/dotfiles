@@ -5,6 +5,7 @@ call plug#begin()
 Plug 'SirVer/ultisnips'
 Plug 'dense-analysis/ale'
 Plug 'jiangmiao/auto-pairs'
+Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
 Plug 'chrisbra/colorizer'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'javascript', 'javascriptreact'] }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -91,10 +92,20 @@ nnoremap <leader>wv <C-w>v
 nnoremap tn :tabnew<Space>
 nnoremap tk :tabnext<CR>
 nnoremap tj :tabprev<CR>
-nnoremap th :tabfirst<CR>
-nnoremap tl :tablast<CR>
 nnoremap tp :tabclose<CR>
 nnoremap gw :Window<CR> 
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
+au TabLeave * let g:lasttab = tabpagenr()
+nnoremap tl :exe "tabn ".g:lasttab<cr>
 
 " Indentation
 set tabstop=2
@@ -110,7 +121,6 @@ nnoremap <silent> <leader>p :set paste<CR>"*p:set nopaste<CR>"
 set hidden
 nnoremap gp :bp<CR>
 nnoremap gn :bn<CR>
-nnoremap gl :ls<CR>
 "nnoremap gd :BD<CR>
 
 " String encoding
@@ -157,6 +167,9 @@ nnoremap [a :ALEPreviousWrap<CR>
 nnoremap ]A :ALELast<CR>
 nnoremap [A :ALEFirst<CR>
 nnoremap <leader>ap :ALEFix prettier<CR>
+
+" Bufferline
+nnoremap tt :BufferLinePick<CR>
 
 " Colorizer
 nnoremap <leader>co :ColorToggle<CR>
