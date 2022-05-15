@@ -13,8 +13,6 @@ Plug 'phaazon/hop.nvim'
 Plug 'Yggdroot/indentLine'
 Plug 'valloric/matchtagalways'
 Plug 'preservim/nerdcommenter'
-Plug 'preservim/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
-Plug 'philrunninger/nerdtree-visual-selection', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'arcticicestudio/nord-vim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -35,13 +33,11 @@ Plug 'airblade/vim-gitgutter'
 Plug 'rhysd/git-messenger.vim'
 Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'terryma/vim-multiple-cursors'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'tpope/vim-repeat'
 Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'qpkorr/vim-bufkill'
-Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'mlaursen/vim-react-snippets', { 'for': ['javascript', 'javascriptreact', 'typescript', 'typescriptreact'] }
 Plug 'christoomey/vim-tmux-navigator'
@@ -183,14 +179,21 @@ let g:indentLine_char = '⦙'
 let g:NERDDefaultAlign = 'left'
 let g:NERDTrimTrailingWhitespace = 1
 
-" NERDTree
-nnoremap <C-n> :NERDTreeToggle<CR>
-nnoremap <leader><C-n> :NERDTreeFind<CR>
-let NERDTreeMinimalUI = 1
-let NERDTreeShowLineNumbers=1
-
 " Nord-vim
 let g:nord_cursor_line_number_background = 1
+
+" Nvim-tree
+let g:nvim_tree_highlight_opened_files = 1
+nnoremap <C-n> :NvimTreeToggle<CR>
+nnoremap <leader><C-n> :NvimTreeFindFile<CR>
+nnoremap <leader>fn :NvimTreeFocus<CR>
+
+let g:nvim_tree_icons = {
+    \ 'folder': {
+    \   'arrow_open': "▾",
+    \   'arrow_closed': "▸",
+    \   }
+    \ }
 
 lua << EOF
 require'nvim-web-devicons'.setup {default = true}
