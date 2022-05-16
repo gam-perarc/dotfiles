@@ -12,6 +12,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'phaazon/hop.nvim'
 Plug 'Yggdroot/indentLine'
+Plug 'nvim-lualine/lualine.nvim'
 Plug 'valloric/matchtagalways'
 Plug 'preservim/nerdcommenter'
 Plug 'arcticicestudio/nord-vim'
@@ -27,8 +28,6 @@ Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'rhysd/git-messenger.vim'
@@ -238,10 +237,6 @@ nnoremap <leader>tf :TSBufDisable highlight<CR>
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsEditSplit="vertical"
-
-" Vim-airline
-let g:airline_theme = 'nord'
-let g:airline_powerline_fonts = 1
 
 " {{{ Vim-fugitive
 nnoremap <leader>gdv :Gvdiffsplit!<CR>
