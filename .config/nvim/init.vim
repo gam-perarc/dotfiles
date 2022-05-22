@@ -2,7 +2,6 @@
 "      Plugins
 "####################
 call plug#begin()
-Plug 'SirVer/ultisnips'
 Plug 'dense-analysis/ale'
 Plug 'jiangmiao/auto-pairs'
 Plug 'chrisbra/colorizer'
@@ -12,6 +11,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'phaazon/hop.nvim'
 Plug 'Yggdroot/indentLine'
 Plug 'nvim-lualine/lualine.nvim'
+Plug 'L3MON4D3/LuaSnip'
+Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'alvarosevilla95/luatab.nvim'
 Plug 'valloric/matchtagalways'
 Plug 'preservim/nerdcommenter'
@@ -38,7 +39,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'qpkorr/vim-bufkill'
 Plug 'kyazdani42/nvim-web-devicons'
-Plug 'mlaursen/vim-react-snippets', { 'for': ['javascript', 'javascriptreact', 'typescript', 'typescriptreact'] }
 Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 "########################################"
@@ -220,10 +220,6 @@ nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 " Treesitter
 nnoremap <leader>to :TSBufEnable highlight<CR>
 nnoremap <leader>tf :TSBufDisable highlight<CR>
-
-" UltiSnips
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsEditSplit="vertical"
 
 " {{{ Vim-fugitive
 nnoremap <leader>gdv :Gvdiffsplit!<CR>
