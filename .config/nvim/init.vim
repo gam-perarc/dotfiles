@@ -173,12 +173,6 @@ nnoremap <leader>co :ColorToggle<CR>
 let g:user_emmet_leader_key='<C-Z>'
 let g:user_emmet_mode='a'
 
-" Hop
-lua << EOF
-require'hop'.setup()
-vim.api.nvim_set_keymap('', '<leader>hw', "<cmd>lua require'hop'.hint_words()<cr>", {})
-EOF
-
 " IndentLine
 let g:indentLine_fileTypeExclude = ['startify']
 let g:indentLine_char = '⦙'
@@ -202,10 +196,6 @@ let g:nvim_tree_show_icons = {
     \ 'files': 1,
     \ 'folder_arrows': 0,
     \ }
-
-lua << EOF
-require'nvim-web-devicons'.setup {default = true}
-EOF
 
 " Tagbar
 nnoremap tg :TagbarToggle<CR>
