@@ -5,7 +5,6 @@ call plug#begin()
 Plug 'SirVer/ultisnips'
 Plug 'dense-analysis/ale'
 Plug 'jiangmiao/auto-pairs'
-Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
 Plug 'chrisbra/colorizer'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'javascript', 'javascriptreact'] }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -13,6 +12,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'phaazon/hop.nvim'
 Plug 'Yggdroot/indentLine'
 Plug 'nvim-lualine/lualine.nvim'
+Plug 'alvarosevilla95/luatab.nvim'
 Plug 'valloric/matchtagalways'
 Plug 'preservim/nerdcommenter'
 Plug 'arcticicestudio/nord-vim'
@@ -165,9 +165,6 @@ nnoremap [a :ALEPreviousWrap<CR>
 nnoremap ]A :ALELast<CR>
 nnoremap [A :ALEFirst<CR>
 nnoremap <leader>ap :ALEFix prettier<CR>
-
-" Bufferline
-nnoremap tt :BufferLinePick<CR>
 
 " Colorizer
 nnoremap <leader>co :ColorToggle<CR>
