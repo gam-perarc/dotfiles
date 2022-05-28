@@ -3,7 +3,6 @@
 "####################
 call plug#begin()
 Plug 'dense-analysis/ale'
-Plug 'jiangmiao/auto-pairs'
 Plug 'chrisbra/colorizer'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'javascript', 'javascriptreact'] }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -17,6 +16,7 @@ Plug 'alvarosevilla95/luatab.nvim'
 Plug 'valloric/matchtagalways'
 Plug 'preservim/nerdcommenter'
 Plug 'arcticicestudio/nord-vim'
+Plug 'windwp/nvim-autopairs'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
