@@ -10,7 +10,7 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
 Plug 'hrsh7th/cmp-path'
 Plug 'chrisbra/colorizer'
-Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'javascript', 'javascriptreact'] }
+Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact'] }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'phaazon/hop.nvim'
