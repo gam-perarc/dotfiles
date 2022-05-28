@@ -1,1 +1,2 @@
-require('nvim-autopairs').setup({fast_wrap = {}})
+local npairs = require('nvim-autopairs')
+npairs.setup({check_ts = true, fast_wrap = {}})
