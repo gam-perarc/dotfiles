@@ -3,6 +3,12 @@
 "####################
 call plug#begin()
 Plug 'dense-analysis/ale'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
+Plug 'hrsh7th/cmp-path'
 Plug 'chrisbra/colorizer'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'javascript', 'javascriptreact'] }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -11,20 +17,17 @@ Plug 'phaazon/hop.nvim'
 Plug 'Yggdroot/indentLine'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'L3MON4D3/LuaSnip'
-Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'alvarosevilla95/luatab.nvim'
 Plug 'valloric/matchtagalways'
 Plug 'preservim/nerdcommenter'
 Plug 'arcticicestudio/nord-vim'
 Plug 'windwp/nvim-autopairs'
 Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/nvim-cmp'
+Plug 'kyazdani42/nvim-tree.lua'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'kyazdani42/nvim-tree.lua'
 Plug 'majutsushi/tagbar'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
