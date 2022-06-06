@@ -18,8 +18,5 @@ npairs.add_rules {
     Rule('[ ', ' ]'):with_pair(function() return false end):with_move(
         function(opts) return opts.prev_char:match('.%]') ~= nil end):use_key(
         ']'),
-    Rule('%(.*%)%s*%=>$', ' {  }',
-         {'typescript', 'typescriptreact', 'javascript', 'javascriptreact'}):use_regex(true)
-        :set_end_pair_length(2)
 }
 -- LuaFormatter on
