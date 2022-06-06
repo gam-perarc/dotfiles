@@ -14,7 +14,7 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'javascript', 'javascriptreact'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'phaazon/hop.nvim'
-Plug 'Yggdroot/indentLine'
+Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'alvarosevilla95/luatab.nvim'
@@ -174,10 +174,6 @@ nnoremap <leader>co :ColorToggle<CR>
 " Emmet
 let g:user_emmet_leader_key='<C-Z>'
 let g:user_emmet_mode='a'
-
-" IndentLine
-let g:indentLine_fileTypeExclude = ['startify']
-let g:indentLine_char = '⦙'
 
 " NERDCommenter
 let g:NERDDefaultAlign = 'left'
