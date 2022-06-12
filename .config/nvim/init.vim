@@ -10,6 +10,7 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
 Plug 'hrsh7th/cmp-path'
 Plug 'chrisbra/colorizer'
+Plug 'numToStr/Comment.nvim'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact'] }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -19,7 +20,6 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'alvarosevilla95/luatab.nvim'
 Plug 'valloric/matchtagalways'
-Plug 'preservim/nerdcommenter'
 Plug 'arcticicestudio/nord-vim'
 Plug 'windwp/nvim-autopairs'
 Plug 'neovim/nvim-lspconfig'
@@ -174,10 +174,6 @@ nnoremap <leader>co :ColorToggle<CR>
 " Emmet
 let g:user_emmet_leader_key='<C-Z>'
 let g:user_emmet_mode='a'
-
-" NERDCommenter
-let g:NERDDefaultAlign = 'left'
-let g:NERDTrimTrailingWhitespace = 1
 
 " Nord-vim
 let g:nord_cursor_line_number_background = 1
