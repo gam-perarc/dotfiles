@@ -3,7 +3,7 @@ require('nvim-treesitter.configs').setup {
 
     highlight = {
         enable = true,
-        disable = {'yaml', 'vim'},
+        disable = {'yaml', 'vim', 'lua'},
         custom_captures = {
             ["tag.attribute"] = "TSKeyword",
             ["tag.delimiter"] = "TSComment"
