@@ -2,7 +2,6 @@
 "      Plugins
 "####################
 call plug#begin()
-Plug 'dense-analysis/ale'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'saadparwaiz1/cmp_luasnip'
@@ -158,17 +157,6 @@ colorscheme nord
 "########################################"
 "            Plugin Settings
 "########################################"
-" Ale
-let g:ale_disable_lsp = 1
-let g:ale_fix_on_save = 1
-let g:ale_sign_error = '✘'
-let g:ale_sign_warning = '⚠'
-nnoremap ]a :ALENextWrap<CR>
-nnoremap [a :ALEPreviousWrap<CR>
-nnoremap ]A :ALELast<CR>
-nnoremap [A :ALEFirst<CR>
-nnoremap <leader>ap :ALEFix prettier<CR>
-
 " Colorizer
 nnoremap <leader>co :ColorToggle<CR>
 
