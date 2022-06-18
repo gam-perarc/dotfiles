@@ -17,10 +17,10 @@ local dockerls_config = {
 local sumneko_lua_config = {
     settings = {
         Lua = {
-            runtime = {version = 'LuaJIT', path = runtime_path},
-            diagnostics = {globals = {'vim'}},
-            workspace = {library = vim.api.nvim_get_runtime_file("", true)},
-            telemetry = {enable = false}
+            runtime = { version = 'LuaJIT', path = runtime_path },
+            diagnostics = { globals = { 'vim' } },
+            workspace = { library = vim.api.nvim_get_runtime_file("", true) },
+            telemetry = { enable = false }
         }
     }
 }
@@ -34,7 +34,7 @@ local servers = {
     yamlls = {}
 }
 
-local opts = {noremap = true, silent = true}
+local opts = { noremap = true, silent = true }
 
 -- LuaFormatter off
 vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
@@ -82,8 +82,15 @@ for lsp, lsp_config in pairs(servers) do
     local base_config = {
         on_attach = on_attach,
         capabilities = capabilities,
-        flags = {debounce_text_changes = 150}
+        flags = { debounce_text_changes = 150 }
     }
     local config = union_config(base_config, lsp_config)
     nvim_lsp[lsp].setup(config)
+end
+
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+
+for type, icon in pairs(signs) do
+    local hl = "DiagnosticSign" .. type
+    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
