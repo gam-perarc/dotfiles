@@ -52,7 +52,7 @@ call plug#end()
 "            General Settings
 "########################################"
 " Leader
-let mapleader=","
+let mapleader=','
 
 " Map source neovim config
 nnoremap <Leader>sv :source $MYVIMRC<CR>
