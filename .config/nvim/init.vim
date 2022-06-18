@@ -156,6 +156,9 @@ colorscheme nord
 
 " Global statusline
 set laststatus=3
+
+" Winbar
+set winbar=%=%m\ %f
 "########################################"
 
 "########################################"
