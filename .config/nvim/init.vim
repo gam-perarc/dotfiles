@@ -109,8 +109,13 @@ noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
-au TabLeave * let g:lasttab = tabpagenr()
 nnoremap tl :exe "tabn ".g:lasttab<cr>
+
+" Set lasttab
+augroup tableave
+  autocmd!
+  autocmd TabLeave * let g:lasttab = tabpagenr()
+augroup END
 
 " Indentation
 set tabstop=2
@@ -146,7 +151,10 @@ set formatoptions-=t
 set backspace=indent,eol,start
 
 " Fold
-autocmd BufWinEnter * normal zR
+augroup Fold
+  autocmd!
+  autocmd BufWinEnter * normal zR
+augroup END
 
 " Quickfix list
 nnoremap <leader>qo :copen<CR>
@@ -216,15 +224,19 @@ nnoremap <leader>go :Git checkout<Space>
 nnoremap <leader>gps :terminal git push<CR>
 nnoremap <leader>gpl :terminal git pull<CR>
 
-" Map '..' to open parent tree.
-autocmd User fugitive
-  \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
-  \   nnoremap <buffer> .. :edit %:h<CR> |
-  \ endif
+augroup Fugitive
+  autocmd!
 
-" Auto-clean fugitive buffers.
-autocmd BufReadPost fugitive://* set bufhidden=delete
-" }}}
+  " Map '..' to open parent tree.
+  autocmd User fugitive
+    \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+    \   nnoremap <buffer> .. :edit %:h<CR> |
+    \ endif
+
+  " Auto-clean fugitive buffers.
+  autocmd BufReadPost fugitive://* set bufhidden=delete
+  " }}}
+augroup END
 
 " Vim-multiple-cursors
 let g:multi_cursor_use_default_mapping = 0
