@@ -98,7 +98,7 @@ nnoremap tn :tabnew<Space>
 nnoremap tk :tabnext<CR>
 nnoremap tj :tabprev<CR>
 nnoremap tp :tabclose<CR>
-nnoremap gw :Window<CR> 
+nnoremap gw :Window<CR>
 noremap <leader>1 1gt
 noremap <leader>2 2gt
 noremap <leader>3 3gt
