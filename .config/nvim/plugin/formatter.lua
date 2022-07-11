@@ -1,9 +1,17 @@
+-- LuaFormatter off
 require("formatter").setup {
     logging = true,
     log_level = vim.log.levels.WARN,
     filetype = {
         lua = {
-            require("formatter.filetypes.lua").luaformat,
+            function ()
+               return {
+                    exe = "lua-format",
+                    args = { "-i" },
+                    stdin = true
+                }
+
+            end
         },
 
         javascript = {
@@ -27,14 +35,13 @@ require("formatter").setup {
         }
     }
 }
+-- LuaFormatter on
 
 local group = "FormatAutogroup"
 
-vim.api.nvim_create_augroup(group, { clear = true })
+vim.api.nvim_create_augroup(group, {clear = true})
 
 vim.api.nvim_create_autocmd('BufWritePost', {
     group = group,
-    callback = function ()
-        vim.api.nvim_command('FormatWrite')
-    end
+    callback = function() vim.api.nvim_command('FormatWrite') end
 })
