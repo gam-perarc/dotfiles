@@ -15,6 +15,7 @@ Plug 'mhartington/formatter.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'phaazon/hop.nvim'
+Plug 'smjonas/inc-rename.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'L3MON4D3/LuaSnip'
