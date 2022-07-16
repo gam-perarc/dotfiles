@@ -2,6 +2,7 @@
 "      Plugins
 "####################
 call plug#begin()
+Plug 'kazhala/close-buffers.nvim'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'saadparwaiz1/cmp_luasnip'
