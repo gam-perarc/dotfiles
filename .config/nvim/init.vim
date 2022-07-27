@@ -37,6 +37,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'majutsushi/tagbar'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'akinsho/toggleterm.nvim', {'tag' : 'v2.*'}
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'rhysd/git-messenger.vim'
