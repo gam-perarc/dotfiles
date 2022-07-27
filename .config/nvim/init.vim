@@ -16,6 +16,7 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'javascript', 'javascriptreact'
 Plug 'mhartington/formatter.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'lewis6991/gitsigns.nvim'
 Plug 'phaazon/hop.nvim'
 Plug 'smjonas/inc-rename.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
@@ -40,7 +41,6 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'akinsho/toggleterm.nvim', {'tag' : 'v2.*'}
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
 Plug 'rhysd/git-messenger.vim'
 Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'terryma/vim-multiple-cursors'
