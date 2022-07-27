@@ -11,6 +11,7 @@ Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
 Plug 'hrsh7th/cmp-path'
 Plug 'chrisbra/colorizer'
 Plug 'numToStr/Comment.nvim'
+Plug 'sindrets/diffview.nvim'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact'] }
 Plug 'mhartington/formatter.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
