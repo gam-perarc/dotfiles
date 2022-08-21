@@ -23,9 +23,9 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'alvarosevilla95/luatab.nvim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'valloric/matchtagalways'
 Plug 'arcticicestudio/nord-vim'
-Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'windwp/nvim-autopairs'
 Plug 'kevinhwang91/nvim-bqf'
 Plug 'mfussenegger/nvim-lint'
@@ -37,7 +37,7 @@ Plug 'windwp/nvim-ts-autotag'
 Plug 'nvim-treesitter/playground'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'majutsushi/tagbar'
-Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'akinsho/toggleterm.nvim', {'tag' : 'v2.*'}
 Plug 'tpope/vim-fugitive'
@@ -67,6 +67,7 @@ nnoremap <Leader>sv :source $MYVIMRC<CR>
 filetype plugin indent on
 
 " Clipboard
+set clipboard+=unnamedplus
 vnoremap <C-c> "+y
 
 " Syntax highlighting
@@ -184,6 +185,13 @@ nnoremap <leader>co :ColorToggle<CR>
 " Emmet
 let g:user_emmet_leader_key='<C-Z>'
 let g:user_emmet_mode='a'
+
+" Markdown Preview
+let g:mkdp_theme = 'light'
+
+" NERDCommenter
+let g:NERDDefaultAlign = 'left'
+let g:NERDTrimTrailingWhitespace = 1
 
 " Nord-vim
 let g:nord_cursor_line_number_background = 1
