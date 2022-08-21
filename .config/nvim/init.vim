@@ -189,10 +189,6 @@ let g:user_emmet_mode='a'
 " Markdown Preview
 let g:mkdp_theme = 'light'
 
-" NERDCommenter
-let g:NERDDefaultAlign = 'left'
-let g:NERDTrimTrailingWhitespace = 1
-
 " Nord-vim
 let g:nord_cursor_line_number_background = 1
 
