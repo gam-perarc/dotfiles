@@ -67,7 +67,6 @@ nnoremap <Leader>sv :source $MYVIMRC<CR>
 filetype plugin indent on
 
 " Clipboard
-set clipboard+=unnamedplus
 vnoremap <C-c> "+y
 
 " Syntax highlighting
