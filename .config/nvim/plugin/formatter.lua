@@ -30,6 +30,19 @@ require("formatter").setup {
             require("formatter.filetypes.typescriptreact").prettier
         },
 
+        json = {
+            require("formatter.filetypes.json").prettier
+        },
+
+        css = {
+            require("formatter.filetypes.css").prettier
+
+        },
+
+        markdown = {
+            require("formatter.filetypes.markdown").prettier
+        },
+
         ["*"] = {
             require("formatter.filetypes.any").remove_trailing_whitespace
         }
