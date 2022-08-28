@@ -1,6 +1,7 @@
 local lint = require('lint');
 
 lint.linters_by_ft = {
+    cpp = {'cppcheck'},
     javascript = {'eslint'},
     javascriptreact = {'eslint'},
     typescript = {'eslint'},
