@@ -36,11 +36,14 @@ require("formatter").setup {
 
         css = {
             require("formatter.filetypes.css").prettier
-
         },
 
         markdown = {
             require("formatter.filetypes.markdown").prettier
+        },
+
+        cpp = {
+            require("formatter.filetypes.cpp").uncrustify
         },
 
         ["*"] = {
