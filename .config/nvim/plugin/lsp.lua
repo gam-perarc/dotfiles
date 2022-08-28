@@ -25,6 +25,7 @@ local sumneko_lua_config = {
 local servers = {
     bashls = {},
     cssls = {},
+    ccls = {},
     dockerls = dockerls_config,
     html = {},
     jsonls = {},
