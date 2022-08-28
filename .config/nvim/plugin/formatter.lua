@@ -50,6 +50,10 @@ require("formatter").setup {
             require("formatter.filetypes.ruby").rubocop
         },
 
+        cpp = {
+            require("formatter.filetypes.cpp").uncrustify
+        },
+
         ["*"] = {
             require("formatter.filetypes.any").remove_trailing_whitespace
         }
