@@ -1,14 +1,7 @@
 require('nvim-treesitter.configs').setup {
     ensure_installed = "all",
 
-    highlight = {
-        enable = true,
-        disable = {'yaml', 'vim', 'lua'},
-        custom_captures = {
-            ["tag.attribute"] = "TSKeyword",
-            ["tag.delimiter"] = "TSComment"
-        }
-    },
+    highlight = {enable = true, disable = {'yaml', 'vim', 'lua'}},
 
     incremental_selection = {
         enable = true,
@@ -41,6 +34,11 @@ require('nvim-treesitter.configs').setup {
         }
     }
 }
+
+vim.api.nvim_set_hl(0, "@tag.tsx", {fg = vim.g.terminal_color_12})
+vim.api.nvim_set_hl(0, "@tag.attribute.tsx", {fg = vim.g.terminal_color_14})
+vim.api.nvim_set_hl(0, "@constructor.tsx", {fg = vim.g.terminal_color_12})
+vim.api.nvim_set_hl(0, "@constructor.ts", {fg = vim.g.terminal_color_12})
 
 vim.api.nvim_exec([[
   set foldmethod=expr
