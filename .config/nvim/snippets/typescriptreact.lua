@@ -15,13 +15,13 @@ return {
         function <>(<>) {
           <>
         };
-     ]], {i(1), i(2), i(3)})),
+     ]], {i(1), i(2), i(0)})),
 
     s("cfn", fmta([[
         const <> = (<>) =>> {
           <>
         };
-     ]], {i(1), i(2), i(3)})),
+     ]], {i(1), i(2), i(0)})),
 
     s("cl", fmta([[
         console.log(<>);
@@ -31,7 +31,7 @@ return {
         export default function<>(<>) {
           <>
         };
-     ]], {i(1), i(2), i(3)})),
+     ]], {i(1), i(2), i(0)})),
 
     s("comp2", fmta([[
         const <> = (<>) =>> {
@@ -39,6 +39,6 @@ return {
         };
 
         export default <>;
-     ]], {i(1), i(2), i(3), rep(1)})),
+     ]], {i(1), i(2), i(0), rep(1)})),
 }
 -- LuaFormatter on
