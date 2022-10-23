@@ -19,7 +19,7 @@ M.go_to_parent_jsx_element = function()
         if is_jsx_element(parent:type()) then jumps = jumps + 1 end
     end
 
-    if (parent == root) then print("equals root") end
+    if (parent == root) then print("Currently at root jsx element.") end
     if parent ~= root then ts_utils.goto_node(parent) end
 end
 
