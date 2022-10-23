@@ -1,6 +1,5 @@
 local nvim_lsp = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
 vim.o.completeopt = 'menu,menuone,noselect'
 
 local runtime_path = vim.split(package.path, ';')
