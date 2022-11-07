@@ -5,7 +5,11 @@ lint.linters_by_ft = {
     javascriptreact = {'eslint'},
     typescript = {'eslint'},
     typescriptreact = {'eslint'},
-    lua = {'luacheck'}
+    lua = {'luacheck'},
+    ruby = {'rubocop'},
+    markdown = {'markdownlint'},
+    css = {'stylelint'},
+    scss = {'stylelint'}
 }
 
 local group = "lint"
