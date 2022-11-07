@@ -25,6 +25,7 @@ local servers = {
     bashls = {},
     cssls = {},
     ccls = {},
+    cssls = {},
     dockerls = dockerls_config,
     html = {},
     jsonls = {},
