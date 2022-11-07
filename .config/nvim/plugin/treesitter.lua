@@ -35,6 +35,21 @@ require('nvim-treesitter.configs').setup {
     }
 }
 
+-- LuaFormatter off
+vim.api.nvim_set_hl(0, "@tag.tsx", {fg = vim.g.terminal_color_12})
+vim.api.nvim_set_hl(0, "@tag.attribute.tsx", {fg = vim.g.terminal_color_14})
+vim.api.nvim_set_hl(0, "@constructor.tsx", {fg = vim.g.terminal_color_12})
+vim.api.nvim_set_hl(0, "@constructor.ts", {fg = vim.g.terminal_color_12})
+
+vim.api.nvim_set_hl(0, "@tag.javascript", {fg = vim.g.terminal_color_12})
+vim.api.nvim_set_hl(0, "@tag.attribute.javascript", {fg = vim.g.terminal_color_14})
+vim.api.nvim_set_hl(0, "@constructor.javascript", {fg = vim.g.terminal_color_12})
+-- vim.api.nvim_set_hl(0, "@tag", {fg = vim.g.terminal_color_12})
+-- vim.api.nvim_set_hl(0, "@tag.attribute", {fg = vim.g.terminal_color_14})
+-- vim.api.nvim_set_hl(0, "@constructor", {fg = vim.g.terminal_color_12})
+-- vim.api.nvim_set_hl(0, "@variable.js", {fg = vim.g.terminal_color_12})
+-- LuaFormatter on
+
 vim.api.nvim_exec([[
   set foldmethod=expr
   set foldexpr=nvim_treesitter#foldexpr()
