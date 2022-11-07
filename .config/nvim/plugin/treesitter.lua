@@ -1,14 +1,7 @@
 require('nvim-treesitter.configs').setup {
     ensure_installed = "all",
 
-    highlight = {
-        enable = true,
-        disable = {'yaml', 'vim', 'lua'},
-        custom_captures = {
-            ["tag.attribute"] = "TSKeyword",
-            ["tag.delimiter"] = "TSComment"
-        }
-    },
+    highlight = {enable = true, disable = {'yaml', 'vim', 'lua'}},
 
     incremental_selection = {
         enable = true,
