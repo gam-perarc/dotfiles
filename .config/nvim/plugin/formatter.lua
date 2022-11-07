@@ -34,13 +34,20 @@ require("formatter").setup {
             require("formatter.filetypes.json").prettier
         },
 
-        css = {
-            require("formatter.filetypes.css").prettier
-
+        html = {
+            require("formatter.filetypes.html").prettier
         },
 
-        markdown = {
-            require("formatter.filetypes.markdown").prettier
+        css = {
+            require("formatter.filetypes.css").prettier
+        },
+
+        scss = {
+            require("formatter.filetypes.css").prettier
+        },
+
+        ruby = {
+            require("formatter.filetypes.ruby").rubocop
         },
 
         ["*"] = {
