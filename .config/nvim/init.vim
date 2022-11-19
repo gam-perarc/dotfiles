@@ -160,6 +160,10 @@ augroup Fold
   autocmd!
   autocmd BufWinEnter * normal zR
 augroup END
+"
+" Location list
+nnoremap <leader>lo :lopen<CR>
+nnoremap <leader>lc :lclose<CR>
 
 " Quickfix list
 nnoremap <leader>qo :copen<CR>
