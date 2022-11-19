@@ -24,6 +24,7 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'L3MON4D3/LuaSnip', {'tag': 'v<CurrentMajor>.*'}
 Plug 'alvarosevilla95/luatab.nvim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+Plug 'chentoast/marks.nvim'
 Plug 'valloric/matchtagalways'
 Plug 'arcticicestudio/nord-vim'
 Plug 'windwp/nvim-autopairs'
