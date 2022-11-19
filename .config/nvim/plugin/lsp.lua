@@ -23,10 +23,15 @@ local sumneko_lua_config = {
 
 local servers = {
     bashls = {},
+    cssls = {},
     ccls = {},
     dockerls = dockerls_config,
+    html = {},
     jsonls = {},
+    marksman = {},
+    ruby_ls = {},
     sumneko_lua = sumneko_lua_config,
+    theme_check = {},
     tsserver = {},
     yamlls = {}
 }

@@ -179,7 +179,7 @@ set winbar=%=%m\ %f
 "            Plugin Settings
 "########################################"
 " Colorizer
-nnoremap <leader>co :ColorToggle<CR>
+nnoremap <leader>ct :ColorToggle<CR>
 
 " Emmet
 let g:user_emmet_leader_key='<C-Z>'
