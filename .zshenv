@@ -7,3 +7,4 @@ export PATH=/usr/local/go/bin:$PATH
 export PATH=~/lazygit/bin:$PATH
 export PATH=~/uncrustify/build/bin:$PATH
 export PATH=~/cppcheck/build/bin:$PATH
+export PATH=~/rust-analyzer/bin:$PATH

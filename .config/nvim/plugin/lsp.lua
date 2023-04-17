@@ -29,6 +29,7 @@ local servers = {
     html = {},
     jsonls = {},
     marksman = {},
+    rust_analyzer = {},
     ruby_ls = {},
     sumneko_lua = sumneko_lua_config,
     theme_check = {},
