@@ -161,6 +161,7 @@ augroup Fold
   autocmd BufWinEnter * normal zR
 augroup END
 "
+
 " Location list
 nnoremap <leader>lo :lopen<CR>
 nnoremap <leader>lc :lclose<CR>
@@ -178,6 +179,9 @@ set laststatus=3
 
 " Winbar
 set winbar=%=%m\ %f
+
+" Help
+noremap <leader>hv :vert help<Space>
 "########################################"
 
 "########################################"
@@ -247,8 +251,8 @@ augroup Fugitive
 
   " Auto-clean fugitive buffers.
   autocmd BufReadPost fugitive://* set bufhidden=delete
-  " }}}
 augroup END
+" }}}
 
 " Vim-multiple-cursors
 let g:multi_cursor_use_default_mapping = 0
