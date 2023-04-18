@@ -50,6 +50,10 @@ require("formatter").setup {
             require("formatter.filetypes.ruby").rubocop
         },
 
+        rust = {
+            require("formatter.filetypes.rust").rustfmt
+        },
+
         cpp = {
             require("formatter.filetypes.cpp").uncrustify
         },
