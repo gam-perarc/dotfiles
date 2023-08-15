@@ -10,17 +10,6 @@ local dockerls_config = {
     root_dir = nvim_lsp.util.root_pattern("Dockerfile", "Dockerfile.dev")
 }
 
-local sumneko_lua_config = {
-    settings = {
-        Lua = {
-            runtime = {version = 'LuaJIT', path = runtime_path},
-            diagnostics = {globals = {'vim'}},
-            workspace = {library = vim.api.nvim_get_runtime_file("", true)},
-            telemetry = {enable = false}
-        }
-    }
-}
-
 local servers = {
     bashls = {},
     cssls = {},
@@ -28,10 +17,10 @@ local servers = {
     dockerls = dockerls_config,
     html = {},
     jsonls = {},
+    lua_ls = {},
     marksman = {},
     rust_analyzer = {},
     ruby_ls = {},
-    sumneko_lua = sumneko_lua_config,
     theme_check = {},
     tsserver = {},
     yamlls = {}

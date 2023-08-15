@@ -8,3 +8,4 @@ export PATH=~/lazygit/bin:$PATH
 export PATH=~/uncrustify/build/bin:$PATH
 export PATH=~/cppcheck/build/bin:$PATH
 export PATH=~/rust-analyzer/bin:$PATH
+export PATH=~/lua-language-server/bin:$PATH
