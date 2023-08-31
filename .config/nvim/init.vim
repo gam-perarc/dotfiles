@@ -26,7 +26,6 @@ Plug 'alvarosevilla95/luatab.nvim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'chentoast/marks.nvim'
 Plug 'valloric/matchtagalways'
-Plug 'arcticicestudio/nord-vim'
 Plug 'windwp/nvim-autopairs'
 Plug 'kevinhwang91/nvim-bqf'
 Plug 'mfussenegger/nvim-lint'
@@ -51,6 +50,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'qpkorr/vim-bufkill'
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'nordtheme/vim'
 Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 "########################################"
