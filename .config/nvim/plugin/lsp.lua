@@ -19,6 +19,7 @@ local servers = {
     jsonls = {},
     lua_ls = {},
     marksman = {},
+    pylsp = {},
     rust_analyzer = {},
     ruby_ls = {},
     theme_check = {},

@@ -58,6 +58,10 @@ require("formatter").setup {
             require("formatter.filetypes.cpp").uncrustify
         },
 
+        python = {
+            require("formatter.filetypes.python").yapf
+        },
+
         ["*"] = {
             require("formatter.filetypes.any").remove_trailing_whitespace
         }
