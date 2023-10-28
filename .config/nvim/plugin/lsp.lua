@@ -22,6 +22,7 @@ local servers = {
     pylsp = {},
     rust_analyzer = {},
     ruby_ls = {},
+    tailwindcss = {},
     theme_check = {},
     tsserver = {},
     yamlls = {}
